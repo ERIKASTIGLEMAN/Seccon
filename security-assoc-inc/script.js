@@ -1,3 +1,3 @@
-document.getElementById("contactBtn").addEventListener("click", function () {
-	alert("Contact form coming soon!");
-});
+//document.getElementById("contactBtn").addEventListener("click", function () {
+//alert("Contact form coming soon!");
+//});

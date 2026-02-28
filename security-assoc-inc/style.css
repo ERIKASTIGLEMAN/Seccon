@@ -4,6 +4,20 @@ body {
 	background-color: #f4f6f8;
 	color: #333;
 }
+
+.header-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px; /* space between logo and text */
+}
+
+.header-logo {
+	height: 115px; /* adjust size */
+	width: auto;
+	margin-top: 50px;
+}
+
 h4 {
 	font-family: "Playfair Display", serif;
 	font-size: 30px;
