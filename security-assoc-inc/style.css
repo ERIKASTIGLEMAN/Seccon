@@ -161,3 +161,25 @@ button {
 button:hover {
 	background-color: #0f2f5c;
 }
+
+.site-footer {
+	background-color: #225fb3; /* same blue as header */
+	color: #fff;
+	text-align: center;
+	padding: 20px 10px;
+	font-size: 14px;
+	margin-top: 40px;
+}
+
+.site-footer p {
+	margin: 5px 0;
+}
+
+.site-footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	text-decoration: underline;
+}

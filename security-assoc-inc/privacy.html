@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Security Associates, Inc.</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav class="nav">
+				<div class="hamburger" id="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<ul class="dropdown-menu" id="menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">Expertise & Background</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="header-content">
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
+
+				<h1>Security Associates, Inc.</h1>
+
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
+			</div>
+
+			<h4>Expert Security Witness and Consulting</h4>
+		</header>
+
+		<section>
+			<h1>Privacy Policy</h1>
+			<p>
+				Last updated: February 13, 2026.
+			<br>
+
+				Security Associates (“us”, “we”, or
+				“our”) operates the Security Associates website (the “Service”). This
+				page informs you of our policies regarding the collection, use and
+				disclosure of Personal Information when you use our Service. We will not
+				use or share your information with anyone except as described in this
+				Privacy Policy. We use your Personal Information for providing and
+				improving the Service. By using the Service, you agree to the collection
+				and use of information in accordance with this policy. Unless otherwise
+				defined in this Privacy Policy, terms used in this Privacy Policy have
+				the same meanings as in our Terms and Conditions, accessible at
+				https://lrfoster.com 
+				
+				<h1>Information Collection And Use  </h1>
+				
+				While using our
+				Service, we may ask you to provide us with certain personally
+				identifiable information that can be used to contact or identify you.
+				Personally identifiable information (“Personal Information”) may
+				include, but is not limited to: 
+				
+				<h1>Log Data </h1>
+				
+				We collect information that
+				your browser sends whenever you visit our Service (“Log Data”). This Log
+				Data may include information such as your computer’s Internet Protocol
+				(“IP”) address, browser type, browser version, the pages of our Service
+				that you visit, the time and date of your visit, the time spent on those
+				pages and other statistics. 
+				
+				
+				<h1>Cookies</h1>
+				of data, which may include an anonymous unique identifier. Cookies are
+				sent to your browser from a web site and stored on your computer’s hard
+				drive. We use “cookies” to collect information. You can instruct your
+				browser to refuse all cookies or to indicate when a cookie is being
+				sent. However, if you do not accept cookies, you may not be able to use
+				some portions of our Service. 
+				
+				<h1>Service Providers</h1>
+				We may employ third	party companies and individuals to facilitate our Service, to provide
+				the Service on our behalf, to perform Service-related services or to
+				assist us in analyzing how our Service is used. These third parties have
+				access to your Personal Information only to perform these tasks on our
+				behalf and are obligated not to disclose or use it for any other
+				purpose. 
+				
+				<h1>Security</h1>
+				The security of your Personal Information is important
+				to us, but remember that no method of transmission over the Internet, or
+				method of electronic storage is 100% secure. While we strive to use
+				commercially acceptable means to protect your Personal Information, we
+				cannot guarantee its absolute security. 
+				
+				<h1>Links To Other Sites</h1>
+				Our Service	may contain links to other sites that are not operated by us. If you
+				click on a third party link, you will be directed to that third party’s
+				site. We strongly advise you to review the Privacy Policy of every site
+				you visit. We have no control over, and assume no responsibility for the
+				content, privacy policies or practices of any third party sites or
+				services.
+				
+				<h1>Children’s Privacy</h1>
+				Our Service does not address anyone under the age of 18 (“Children”). We do not knowingly collect personally identifiable information from children under 18. If you are a parent or
+				guardian and you are aware that your child has provided us with Personal
+				Information, please contact us. If we discover that a child under 18 has
+				provided us with Personal Information, we will delete such information
+				from our servers immediately. 
+				
+				<h1>Compliance With Laws</h1>
+				We will disclose your Personal Information where required to do so by law or subpoena. 
+				
+				<h1>Changes To This Privacy Policy </h1>
+				We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+				
+				You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. 
+				
+				<h1>Contact Us</h1>
+				questions about this Privacy Policy, please contact us.
+			</p>
+		</section>
+
+		<footer class="site-footer">
+			<p>© 1997–2026 Security Associates, Inc.</p>
+			<p class="footer-links">
+				<a href="terms.html">Terms of Use</a> |
+				<a href="privacy.html">Privacy Policy</a>
+			</p>
+		</footer>
+	</body>
+</html>
+
+<!-- JavaScript for hamburger menu functionality -->
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const hamburger = document.getElementById("hamburger");
+		const menu = document.getElementById("menu");
+
+		if (!hamburger || !menu) return;
+
+		// Toggle menu on hamburger click
+		hamburger.addEventListener("click", function (e) {
+			e.stopPropagation();
+			menu.classList.toggle("open");
+		});
+
+		// Close when mouse leaves the menu
+		menu.addEventListener("mouseleave", function () {
+			menu.classList.remove("open");
+		});
+
+		// Close when clicking anywhere else
+		document.addEventListener("click", function (e) {
+			if (!e.target.closest(".nav")) {
+				menu.classList.remove("open");
+			}
+		});
+	});
+</script>
+
+<!-- JavaScript for contact button functionality -->
+<script>
+	document.getElementById("contactBtn").addEventListener("click", function () {
+		window.location.href = "mailto:seccon@aol.com";
+	});
+</script>
