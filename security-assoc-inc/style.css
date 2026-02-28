@@ -183,3 +183,21 @@ button:hover {
 .site-footer a:hover {
 	text-decoration: underline;
 }
+
+.privacy-content {
+	max-width: 900px;
+	margin: 2rem auto;
+	padding: 0 20px;
+	text-align: left; /* ⬅ aligns text to left margin */
+	line-height: 1.6;
+	color: #000;
+}
+
+.terms {
+	max-width: 900px;
+	margin: 2rem auto;
+	padding: 0 20px;
+	text-align: left; /* ⬅ aligns text to left margin */
+	line-height: 1.6;
+	color: #000;
+}
