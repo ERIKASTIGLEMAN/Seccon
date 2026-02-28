@@ -12,48 +12,114 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
-	<script>
-		const hamburger = document.getElementById("hamburger");
-		const menu = document.getElementById("menu");
-
-		hamburger.addEventListener("click", function () {
-			menu.classList.toggle("open");
-		});
-	</script>
-
 	<body>
 		<header>
+			<nav class="nav">
+				<div class="hamburger" id="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<ul class="dropdown-menu" id="menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">Expertise & Background</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
 			<h1>Security Associates, Inc.</h1>
 
 			<h4>Expert Security Witness and Consulting</h4>
 		</header>
 
-		<nav class="nav">
-			<div class="hamburger" id="hamburger">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-
-			<ul class="dropdown-menu" id="menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">Expertise & Background</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-
 		<section>
-			<h2>Welcome</h2>
-			<p>
-				Providing unbiased security consulting services designed to protect your
-				personnel and assets.
+			<h1>Welcome</h1>
+
+			<p class="body-centered">
+				Security Associates, Inc. is a non-product affiliated security
+				management consulting firm subscribing to the Code of Ethics of the
+				International Association of Professional Security Consultants. This
+				means we do not represent or receive fees from providers of security
+				equipment or personnel should we recommend their services. Therefore,
+				you can be assured of an unbiased, cost effective assessment of your
+				needs and recommendations that are designed strictly for the purpose of
+				protecting your personnel, customers and assets from criminal acts.
 			</p>
+			<br />
+			<br />
+			<br />
+			<br />
+
+			<h1>Professional Affiliations</h1>
+
+			<ul class="links-centered">
+				<li>
+					<a href="https://iapsc.org" target="_blank" rel="noopener">
+						International Association of Professional Security Consultants
+					</a>
+				</li>
+				<br />
+				<li>
+					<a
+						href="https://www.asisonline.org/asis-membership"
+						target="_blank"
+						rel="noopener"
+					>
+						American Society for Industrial Security
+					</a>
+				</li>
+				<br />
+				<li>
+					<a href="https://www.acjs.org" target="_blank" rel="noopener">
+						The American Society of Criminology
+					</a>
+				</li>
+			</ul>
+			<br />
+			<br />
+			<br />
 			<button id="contactBtn">Contact Us</button>
 		</section>
 
 		<script src="script.js"></script>
+
+		<footer></footer>
 	</body>
 </html>
 
-<footer></footer>
+<!-- JavaScript for hamburger menu functionality -->
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const hamburger = document.getElementById("hamburger");
+		const menu = document.getElementById("menu");
+
+		if (!hamburger || !menu) return;
+
+		// Toggle menu on hamburger click
+		hamburger.addEventListener("click", function (e) {
+			e.stopPropagation();
+			menu.classList.toggle("open");
+		});
+
+		// Close when mouse leaves the menu
+		menu.addEventListener("mouseleave", function () {
+			menu.classList.remove("open");
+		});
+
+		// Close when clicking anywhere else
+		document.addEventListener("click", function (e) {
+			if (!e.target.closest(".nav")) {
+				menu.classList.remove("open");
+			}
+		});
+	});
+</script>
+
+<!-- JavaScript for contact button functionality -->
+<script>
+	document.getElementById("contactBtn").addEventListener("click", function () {
+		window.location.href = "mailto:seccon@aol.com";
+	});
+</script>

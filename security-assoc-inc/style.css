@@ -49,6 +49,7 @@ header h1::after {
 	left: 1rem; /* ⬅ left side */
 	width: 30px;
 	cursor: pointer;
+	z-index: 2000; /* ⬅ ensure it's above the dropdown */
 }
 
 .hamburger span {
@@ -63,12 +64,19 @@ header h1::after {
 	display: none;
 	position: absolute;
 	top: 3rem;
-	left: 1rem;
-	background: #fff;
-	border: 1px solid #ddd;
+	text-align: left;
 	padding: 0.5rem 0;
 	min-width: 180px;
 	z-index: 1000;
+}
+
+.dropdown-menu a {
+	display: block;
+	padding: 0.5rem 1rem;
+	line-height: 0.5;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
 }
 
 .dropdown-menu.open {
@@ -78,6 +86,54 @@ header h1::after {
 section {
 	padding: 40px;
 	text-align: center;
+}
+
+.body-centered {
+	text-align: center;
+	line-height: 2.5;
+	max-width: 1200px;
+	margin: 2rem auto 0;
+	color: #000; /* ⬅ black text */
+}
+
+.body-centered li {
+	color: #000;
+	margin-bottom: 0.75rem;
+}
+
+.body-centered a,
+.body-centered a:visited,
+.body-centered a:hover,
+.body-centered a:active {
+	color: #000; /* ⬅ black link */
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.links-centered {
+	text-align: center;
+	line-height: 1;
+	max-width: 1200px;
+	margin: 2rem auto;
+	color: #000; /* ⬅ black text */
+}
+
+.links-centered li {
+	color: #000;
+	margin-bottom: 0.75rem;
+}
+
+.links-centered a,
+.links-centered a:visited,
+.links-centered a:hover,
+.links-centered a:active {
+	color: #000; /* ⬅ black link */
+	text-decoration: none;
 }
 
 button {

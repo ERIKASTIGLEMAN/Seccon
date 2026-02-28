@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Security Associates, Inc.</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav class="nav">
+				<div class="hamburger" id="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<ul class="dropdown-menu" id="menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">Expertise & Background</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<h1>Security Associates, Inc.</h1>
+
+			<h4>Expert Security Witness and Consulting</h4>
+		</header>
+
+		<section>
+			<h2>Welcome</h2>
+			<p>
+				Providing unbiased security consulting services designed to protect your
+				personnel and assets.
+			</p>
+			<button id="contactBtn">Contact Us</button>
+		</section>
+
+		<script src="script.js"></script>
+
+		<footer></footer>
+	</body>
+</html>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const hamburger = document.getElementById("hamburger");
+		const menu = document.getElementById("menu");
+
+		if (!hamburger || !menu) return;
+
+		// Toggle menu on hamburger click
+		hamburger.addEventListener("click", function (e) {
+			e.stopPropagation();
+			menu.classList.toggle("open");
+		});
+
+		// Close when mouse leaves the menu
+		menu.addEventListener("mouseleave", function () {
+			menu.classList.remove("open");
+		});
+
+		// Close when clicking anywhere else
+		document.addEventListener("click", function (e) {
+			if (!e.target.closest(".nav")) {
+				menu.classList.remove("open");
+			}
+		});
+	});
+</script>
