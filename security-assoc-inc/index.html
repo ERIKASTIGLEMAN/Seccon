@@ -11,11 +11,37 @@
 		<title>Security Associates, Inc.</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
+
+	<script>
+		const hamburger = document.getElementById("hamburger");
+		const menu = document.getElementById("menu");
+
+		hamburger.addEventListener("click", () => {
+			menu.style.display = menu.style.display === "block" ? "none" : "block";
+		});
+	</script>
+
 	<body>
 		<header>
 			<h1>Security Associates, Inc.</h1>
+
 			<h4>Expert Security Witness and Consulting</h4>
 		</header>
+
+		<nav class="nav">
+			<div class="hamburger" id="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<ul class="dropdown-menu" id="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">Expertise & Background</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
 
 		<section>
 			<h2>Welcome</h2>
