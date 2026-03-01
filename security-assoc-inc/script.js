@@ -1,46 +1,70 @@
-const serviceItems = document.querySelectorAll(".service-item");
-const servicesSection = document.querySelector(".services");
+document.addEventListener("DOMContentLoaded", () => {
+	/* =========================
+	   SERVICES ACCORDION
+	========================= */
+	const serviceItems = document.querySelectorAll(".service-item");
+	const servicesSection = document.querySelector(".services");
 
-serviceItems.forEach((item) => {
-	// Open one at a time
-	item.addEventListener("toggle", () => {
-		if (item.open) {
-			serviceItems.forEach((other) => {
-				if (other !== item) {
-					other.removeAttribute("open");
+	if (servicesSection && serviceItems.length) {
+		// Only one open at a time
+		serviceItems.forEach((item) => {
+			item.addEventListener("toggle", () => {
+				if (item.open) {
+					serviceItems.forEach((other) => {
+						if (other !== item) other.removeAttribute("open");
+					});
 				}
 			});
-		}
-	});
-});
-
-// Close all when mouse leaves services section
-servicesSection.addEventListener("mouseleave", () => {
-	serviceItems.forEach((item) => item.removeAttribute("open"));
-});
-
-// Contact form submission
-
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-	e.preventDefault();
-
-	const formData = new FormData(this);
-
-	fetch("send-contact.php", {
-		method: "POST",
-		body: formData,
-	})
-		.then((response) => response.text())
-		.then(() => {
-			const modal = document.getElementById("thankYouModal");
-			modal.style.display = "flex";
-
-			setTimeout(() => {
-				modal.style.display = "none";
-				this.reset();
-			}, 10000);
-		})
-		.catch(() => {
-			alert("There was an error sending your message. Please try again.");
 		});
+
+		// Close all when mouse leaves services area
+		servicesSection.addEventListener("mouseleave", () => {
+			serviceItems.forEach((item) => item.removeAttribute("open"));
+		});
+	}
+
+	/* =========================
+	   HAMBURGER MENU
+	========================= */
+	const hamburger = document.getElementById("hamburger");
+	const menu = document.getElementById("menu");
+
+	if (hamburger && menu) {
+		hamburger.addEventListener("click", (e) => {
+			e.stopPropagation();
+			menu.classList.toggle("open");
+		});
+
+		document.addEventListener("click", (e) => {
+			if (!e.target.closest(".nav")) {
+				menu.classList.remove("open");
+			}
+		});
+	}
+
+	/* =========================
+	   CONTACT FORM + MODAL
+	========================= */
+	const form = document.getElementById("contactForm");
+	const modal = document.getElementById("thankYouModal");
+
+	if (form && modal) {
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+
+			const formData = new FormData(form);
+
+			fetch("send-contact.php", {
+				method: "POST",
+				body: formData,
+			}).finally(() => {
+				modal.style.display = "flex";
+
+				setTimeout(() => {
+					modal.style.display = "none";
+					form.reset();
+				}, 10000);
+			});
+		});
+	}
 });

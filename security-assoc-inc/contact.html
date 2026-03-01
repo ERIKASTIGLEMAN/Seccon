@@ -115,7 +115,6 @@
 					</div>
 				</div>
 			</section>
-			<script src="script.js"></script>
 		</main>
 
 		<footer class="site-footer">
@@ -125,33 +124,6 @@
 				<a href="privacy.html">Privacy Policy</a>
 			</p>
 		</footer>
+		<script src="script.js"></script>
 	</body>
 </html>
-
-<!-- JavaScript for hamburger menu functionality -->
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const hamburger = document.getElementById("hamburger");
-		const menu = document.getElementById("menu");
-
-		if (!hamburger || !menu) return;
-
-		// Toggle menu on hamburger click
-		hamburger.addEventListener("click", function (e) {
-			e.stopPropagation();
-			menu.classList.toggle("open");
-		});
-
-		// Close when mouse leaves the menu
-		menu.addEventListener("mouseleave", function () {
-			menu.classList.remove("open");
-		});
-
-		// Close when clicking anywhere else
-		document.addEventListener("click", function (e) {
-			if (!e.target.closest(".nav")) {
-				menu.classList.remove("open");
-			}
-		});
-	});
-</script>

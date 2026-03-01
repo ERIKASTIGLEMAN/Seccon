@@ -15,11 +15,20 @@ body {
 	flex-direction: column;
 }
 
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 6000;
+}
+
 .header-content {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 40px; /* space between logo and text */
+	position: relative;
+	z-index: 1;
 }
 
 .header-logo {
@@ -35,6 +44,13 @@ h4 {
 	margin-top: -8px;
 }
 
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 6000;
+}
+
 header {
 	font-family: "Playfair Display", serif;
 	font-style: normal;
@@ -43,6 +59,8 @@ header {
 	color: rgba(6, 6, 6, 0.915);
 	padding: 15px;
 	text-align: center;
+	position: relative;
+	z-index: 3000;
 }
 
 header h1 {
@@ -60,10 +78,6 @@ header h1::after {
 	background-color: #c9a227;
 	margin: 0.25rem auto 0; /* ⬅ reduce gap above first line */
 	box-shadow: 0 5px 0 #c9a227; /* ⬅ distance between the two lines */
-}
-
-.nav {
-	position: relative;
 }
 
 /* Hamburger icon */
@@ -88,10 +102,11 @@ header h1::after {
 	display: none;
 	position: absolute;
 	top: 3rem;
-	text-align: left;
-	padding: 0.5rem 0;
+	left: 1rem;
 	min-width: 180px;
-	z-index: 1000;
+	background: #f7f7f5;
+	z-index: 4000; /* 🔥 higher than services */
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .dropdown-menu a {
