@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -10,10 +12,11 @@
 		/>
 		<title>Security Associates, Inc.</title>
 		<link rel="stylesheet" href="style.css" />
+	
 	</head>
 
 	<body>
-		<header>
+	<header>
 			<nav class="nav">
 				<div class="hamburger" id="hamburger">
 					<span></span>
@@ -29,25 +32,100 @@
 				</ul>
 			</nav>
 
-			<h1>Security Associates, Inc.</h1>
+			<div class="header-content">
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
 
-			<h4>Expert Security Witness and Consulting</h4>
+				<h1>Security Associates, Inc.</h1>
+
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
+			</div>
+
+			<h4>Security Expert Witness & Consulting</h4>
 		</header>
 
-		<section>
-			<h2>Welcome</h2>
+		<section class="cv-section">
+			<h2>Expert Witness Curriculum Vitae</h2>
 			<p>
-				Providing unbiased security consulting services designed to protect your
-				personnel and assets.
+
+				<img
+			src="photos/IMG_0740.png"
+			alt="Mr. Foster"
+			class="cv-photo"
+		/>
+
+				Mr. Foster brings more than 25 years of experience in corporate security
+				management, law enforcement, and security consulting. During his law
+				enforcement career, Mr. Foster served as a detective with investigative
+				assignments in burglary, auto theft, and crimes against persons. He
+				later transitioned to the private sector, where he held the position of
+				Vice President of Security for a statewide banking institution. In this
+				role, he managed a department of 30 professionals and oversaw
+				enterprise-wide responsibilities including risk assessments, physical
+				security, investigations, data security, executive protection,
+				regulatory compliance, security training, and the procurement and
+				maintenance of security systems and equipment. As a security consultant,
+				Mr. Foster has developed, evaluated, and audited security programs for a
+				wide range of properties and industries, 	including financial
+				institutions, multi-unit residential 
+				</p>	
+				<p>
+		communities, hotels and motels,
+				retail establishments, high-rise office buildings, shopping malls,
+				parking facilities, college campuses, lounges, jewelry stores, truck
+				stops, and other commercial environments. Mr. Foster is frequently
+				retained by law firms representing both plaintiffs and defendants as a
+				litigation consultant in negligent security cases. 	He has testified at
+				trial as an expert witness in the field of security. In addition to his
+				professional practice, Mr. Foster has served as an adjunct instructor at
+				two colleges, teaching courses in criminology, criminalistics, criminal
+				justice management, and computer fraud. He has delivered professional
+				presentations to the Community Bankers of America, the International
+				Association of Professional Security Consultants, and the American
+				Society of Industrial Security Florida West Coast Chapter. He has also
+				presented seminars on negligent security and served as lead speaker for
+				the Greater Tampa Chamber of Commerce Community Security Task Force,
+				addressing business and professional groups throughout the region.
+				Additionally, he has conducted presentations for trial attorneys and
+				insurance claims professionals on the selection and effective use of
+				security experts in negligent security litigation. Mr. Foster was a
+				contributing author to Premises Security and Liability: A Comprehensive
+				Guide From the Experts. He also served as a committee chairman for the
+				International Association of Professional Security Consultants and
+				developed its Forensic Methodology, a structured process designed to
+				formalize expert security opinions and safeguard testimony against
+				Daubert challenges. Mr. Foster holds a Bachelor of Science degree in Law
+				Enforcement and Security from the University of Nebraska at Omaha and a
+				Master of Education degree from the University of Tampa. He has
+				completed numerous professional seminars covering a broad range of
+				physical security topics. He is a member and former chapter chairman of
+				the American Society of Industrial Security and is currently a member of
+				the International Association of Professional Security Consultants. Mr.
+				Foster has also served on the Board of Directors for Crime Stoppers of
+				West Central Florida.
 			</p>
 			<button id="contactBtn">Contact Us</button>
 		</section>
 
 		<script src="script.js"></script>
 
-		<footer></footer>
+		<footer class="site-footer">
+			<p>© 1997–2026 Security Associates, Inc.</p>
+			<p class="footer-links">
+				<a href="terms.html">Terms of Use</a> |
+				<a href="privacy.html">Privacy Policy</a>
+			</p>
+		</footer>
 	</body>
 </html>
+
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
 		const hamburger = document.getElementById("hamburger");
