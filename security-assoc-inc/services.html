@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -29,25 +30,118 @@
 				</ul>
 			</nav>
 
-			<h1>Security Associates, Inc.</h1>
+			<div class="header-content">
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
 
-			<h4>Expert Security Witness and Consulting</h4>
+				<h1>Security Associates, Inc.</h1>
+
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
+			</div>
+
+			<h4>Security Expert Witness & Consulting</h4>
 		</header>
+		<main class="page-content">
+			<section class="services">
+				<h1>Services Provided</h1>
 
-		<section>
-			<h2>Welcome</h2>
-			<p>
-				Providing unbiased security consulting services designed to protect your
-				personnel and assets.
+				<div class="services-grid">
+					<details class="service-item">
+						<summary>Legal Consulting & Expert Witness Services</summary>
+						<p>
+							Mr. Foster provides security consulting and expert witness
+							services to law firms representing both plaintiffs and defendants
+							in premises liability and negligent security litigation. His work
+							focuses on foreseeability, standard of care, and the defensibility
+							of security programs central to case evaluation, expert
+							disclosure, and trial strategy.
+						</p>
+					</details>
+
+					<details class="service-item">
+						<summary>Evaluation & Security Risk Analysis</summary>
+						<p>
+							In-depth security risk assessments identify and prioritize
+							vulnerabilities commonly at issue in negligent security claims,
+							including environmental risk factors, crime patterns, operational
+							practices, and the reasonableness of security measures in place at
+							the time of an incident.
+						</p>
+					</details>
+
+					<details class="service-item">
+						<summary>Surveys & Standard-of-Care Assessments</summary>
+						<p>
+							Comprehensive security surveys evaluate existing security
+							measures, policies, procedures, staffing, and physical safeguards
+							against recognized industry standards, accepted practices, and
+							regulatory requirements.
+						</p>
+					</details>
+
+					<details class="service-item">
+						<summary>Program Analysis & Defensibility</summary>
+						<p>
+							Evaluation of how security resources were designed, implemented,
+							and managed, including whether measures were reasonably integrated
+							to address foreseeable risks and how decisions can be clearly
+							explained and defended in litigation.
+						</p>
+					</details>
+
+					<details class="service-item">
+						<summary>Financial Institution Security Litigation Support</summary>
+						<p>
+							Specialized expertise for cases involving financial institutions,
+							including ATM security, after-hours depositories, branch security
+							operations, and regulatory compliance relevant to litigation.
+						</p>
+					</details>
+
+					<details class="service-item">
+						<summary>Litigation Avoidance & Pre-Loss Consulting</summary>
+						<p>
+							Proactive consulting services focused on reducing exposure to
+							premises liability and negligent security claims through risk
+							identification, documentation improvement, and alignment with
+							accepted industry standards.
+						</p>
+					</details>
+
+					<details class="service-item">
+						<summary>Consulting & Expert Witness Testimony</summary>
+						<p>
+							Assistance throughout all phases of litigation, including case
+							screening, expert disclosures, report preparation, deposition
+							support, and trial testimony. Opinions are developed using a
+							structured forensic methodology designed to withstand Daubert and
+							similar admissibility challenges.
+						</p>
+					</details>
+				</div>
+			</section>
+
+			<script src="script.js"></script>
+		</main>
+
+		<footer class="site-footer">
+			<p>© 1997–2026 Security Associates, Inc.</p>
+			<p class="footer-links">
+				<a href="terms.html">Terms of Use</a> |
+				<a href="privacy.html">Privacy Policy</a>
 			</p>
-			<button id="contactBtn">Contact Us</button>
-		</section>
-
-		<script src="script.js"></script>
-
-		<footer></footer>
+		</footer>
 	</body>
 </html>
+
+<!-- JavaScript for hamburger menu functionality -->
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
 		const hamburger = document.getElementById("hamburger");
@@ -74,3 +168,5 @@
 		});
 	});
 </script>
+
+<!--Auto close handled in script.js section-->

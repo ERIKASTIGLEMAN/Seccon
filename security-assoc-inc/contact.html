@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -29,25 +30,78 @@
 				</ul>
 			</nav>
 
-			<h1>Security Associates, Inc.</h1>
+			<div class="header-content">
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
 
-			<h4>Expert Security Witness and Consulting</h4>
+				<h1>Security Associates, Inc.</h1>
+
+				<img
+					src="photos/logo.png"
+					alt="Security Associates Logo"
+					class="header-logo"
+				/>
+			</div>
+
+			<h4>Security Expert Witness & Consulting</h4>
 		</header>
+		<main class="page-content">
+			<section class="contact-section">
+				<div class="contact-container">
+					<h1>Connect with us</h1>
+					<p class="contact-subtext">
+						You can contact us directly through the form below on our website.
+						We will respond to your inquiry as soon as possible. Alternatively,
+						you can reach us by phone or email using the contact information
+						provided at the bottom of this page.
+					</p>
 
-		<section>
-			<h2>Welcome</h2>
-			<p>
-				Providing unbiased security consulting services designed to protect your
-				personnel and assets.
+					<form class="contact-form">
+						<div class="form-row">
+							<input type="text" placeholder="First name" />
+							<input type="text" placeholder="Last name" />
+						</div>
+
+						<div class="form-row">
+							<input type="tel" placeholder="Phone Number" />
+							<input
+								type="email"
+								placeholder="Email address (required)"
+								required
+							/>
+						</div>
+
+						<textarea placeholder="Tell us about your case"></textarea>
+
+						<button type="submit">Contact Us</button>
+					</form>
+
+					<div class="contact-footer">
+						<div><span>📞</span> +1 813 254 3654</div>
+						<div><span>✉️</span> seccon@aol.com</div>
+						<div>
+							<span>🏛️</span> 13811 Spoonbill Lane<br />Clearwater, FL 33762
+						</div>
+					</div>
+				</div>
+			</section>
+			<script src="script.js"></script>
+		</main>
+
+		<footer class="site-footer">
+			<p>© 1997–2026 Security Associates, Inc.</p>
+			<p class="footer-links">
+				<a href="terms.html">Terms of Use</a> |
+				<a href="privacy.html">Privacy Policy</a>
 			</p>
-			<button id="contactBtn">Contact Us</button>
-		</section>
-
-		<script src="script.js"></script>
-
-		<footer></footer>
+		</footer>
 	</body>
 </html>
+
+<!-- JavaScript for hamburger menu functionality -->
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
 		const hamburger = document.getElementById("hamburger");
