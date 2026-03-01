@@ -59,25 +59,52 @@
 						provided at the bottom of this page.
 					</p>
 
-					<form class="contact-form">
+					<form class="contact-form" id="contactForm">
 						<div class="form-row">
-							<input type="text" placeholder="First name" />
-							<input type="text" placeholder="Last name" />
+							<input
+								type="text"
+								name="first_name"
+								placeholder="First name"
+								required
+							/>
+							<input
+								type="text"
+								name="last_name"
+								placeholder="Last name"
+								required
+							/>
 						</div>
 
 						<div class="form-row">
-							<input type="tel" placeholder="Phone Number" />
+							<input type="tel" name="phone" placeholder="Phone Number" />
 							<input
 								type="email"
+								name="email"
 								placeholder="Email address (required)"
 								required
 							/>
 						</div>
 
-						<textarea placeholder="Tell us about your case"></textarea>
+						<textarea
+							name="message"
+							placeholder="Describe your case"
+							required
+						></textarea>
 
 						<button type="submit">Contact Us</button>
 					</form>
+
+					<!-- Modal for thank you message -->
+
+					<div class="modal" id="thankYouModal">
+						<div class="modal-content">
+							<p>
+								<strong>Thank you.</strong><br /><br />
+								Someone from our firm will contact you soon.<br />
+								Your message has been sent.
+							</p>
+						</div>
+					</div>
 
 					<div class="contact-footer">
 						<div><span>📞</span> +1 813 254 3654</div>
