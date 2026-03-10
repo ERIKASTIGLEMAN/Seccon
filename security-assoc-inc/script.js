@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const servicesSection = document.querySelector(".services");
 
 	if (servicesSection && serviceItems.length) {
-		// Only one open at a time
 		serviceItems.forEach((item) => {
 			item.addEventListener("toggle", () => {
 				if (item.open) {
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 
-		// Close all when mouse leaves services area
 		servicesSection.addEventListener("mouseleave", () => {
 			serviceItems.forEach((item) => item.removeAttribute("open"));
 		});
@@ -35,10 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			menu.classList.toggle("open");
 		});
 
-		document.addEventListener("click", (e) => {
-			if (!e.target.closest(".nav")) {
-				menu.classList.remove("open");
-			}
+		menu.addEventListener("click", (e) => {
+			e.stopPropagation(); // prevent self-close
+		});
+
+		document.addEventListener("click", () => {
+			menu.classList.remove("open");
+		});
+	}
+
+	/* =========================
+	   CONTACT BUTTON (HOME)
+	========================= */
+	const contactBtn = document.getElementById("contactBtn");
+	if (contactBtn) {
+		contactBtn.addEventListener("click", () => {
+			window.location.href = "mailto:seccon@aol.com";
 		});
 	}
 
