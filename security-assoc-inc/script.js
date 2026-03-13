@@ -67,29 +67,38 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+
 	/* =========================
-	   CONTACT FORM + MODAL
-	========================= */
-	const form = document.getElementById("contactForm");
-	const modal = document.getElementById("thankYouModal");
+   CONTACT FORM + MODAL
+   (Netlify Forms)
+========================= */
 
-	if (form && modal) {
-		form.addEventListener("submit", (e) => {
-			e.preventDefault();
+const form = document.getElementById("contactForm");
+const modal = document.getElementById("thankYouModal");
 
-			const formData = new FormData(form);
+if (form && modal) {
+	form.addEventListener("submit", async (e) => {
+		e.preventDefault();
 
-			fetch("send-contact.php", {
+		const formData = new FormData(form);
+
+		try {
+			await fetch("/", {
 				method: "POST",
-				body: formData,
-			}).finally(() => {
-				modal.style.display = "flex";
-
-				setTimeout(() => {
-					modal.style.display = "none";
-					form.reset();
-				}, 10000);
+				headers: {
+					"Content-Type": "application/x-www-form-urlencoded",
+				},
+				body: new URLSearchParams(formData).toString(),
 			});
-		});
-	}
-});
+
+			modal.style.display = "flex";
+
+			setTimeout(() => {
+				modal.style.display = "none";
+				form.reset();
+			}, 10000);
+		} catch (error) {
+			alert("There was a problem sending your message. Please try again.");
+		}
+	});
+}

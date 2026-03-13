@@ -59,7 +59,21 @@
 						provided at the bottom of this page.
 					</p>
 
-					<form class="contact-form" id="contactForm">
+					<form
+						class="contact-form"
+						id="contactForm"
+						name="contact"
+						method="POST"
+						data-netlify="true"
+						netlify
+						data-netlify-honeypot="bot-field"
+					>
+						<input type="hidden" name="form-name" value="contact" />
+
+						<p hidden>
+							<label>Do not fill this out: <input name="bot-field" /></label>
+						</p>
+
 						<div class="form-row">
 							<input
 								type="text"
