@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	/* =========================
    CONTACT FORM + MODAL
-   (Netlify Forms)
 ========================= */
+
 	const form = document.getElementById("contactForm");
 	const modal = document.getElementById("thankYouModal");
 
@@ -90,13 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
 				});
 
 				modal.style.display = "flex";
-
-				setTimeout(() => {
-					modal.style.display = "none";
-					form.reset();
-				}, 10000);
+				form.reset();
 			} catch (error) {
 				alert("There was a problem sending your message. Please try again.");
+			}
+		});
+
+		// Close modal when clicking outside the modal content
+		modal.addEventListener("click", (e) => {
+			if (e.target === modal) {
+				modal.style.display = "none";
 			}
 		});
 	}

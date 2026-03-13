@@ -68,26 +68,21 @@
 						action="/contact.html"
 						data-netlify="true"
 						data-netlify-honeypot="bot-field"
+						data-netlify-recaptcha="true"
 					>
 						<input type="hidden" name="form-name" value="contact" />
+						<input
+							type="hidden"
+							name="subject"
+							value="New Website Inquiry - Security Associates"
+						/>
 
 						<p hidden>
 							<label>Do not fill this out: <input name="bot-field" /></label>
 						</p>
 
 						<div class="form-row">
-							<input
-								type="text"
-								name="first_name"
-								placeholder="First name"
-								required
-							/>
-							<input
-								type="text"
-								name="last_name"
-								placeholder="Last name"
-								required
-							/>
+							<input type="text" name="name" placeholder="Full Name" required />
 						</div>
 
 						<div class="form-row">
@@ -105,6 +100,7 @@
 							placeholder="Describe your case"
 							required
 						></textarea>
+						<div data-netlify-recaptcha="true"></div>
 
 						<button type="submit">Contact Us</button>
 					</form>
