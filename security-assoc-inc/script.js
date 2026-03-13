@@ -67,38 +67,42 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-
 	/* =========================
    CONTACT FORM + MODAL
    (Netlify Forms)
 ========================= */
 
-const form = document.getElementById("contactForm");
-const modal = document.getElementById("thankYouModal");
+	/* =========================
+   CONTACT FORM + MODAL
+   (Netlify Forms)
+========================= */
+	const form = document.getElementById("contactForm");
+	const modal = document.getElementById("thankYouModal");
 
-if (form && modal) {
-	form.addEventListener("submit", async (e) => {
-		e.preventDefault();
+	if (form && modal) {
+		form.addEventListener("submit", async (e) => {
+			e.preventDefault();
 
-		const formData = new FormData(form);
+			const formData = new FormData(form);
 
-		try {
-			await fetch("/", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/x-www-form-urlencoded",
-				},
-				body: new URLSearchParams(formData).toString(),
-			});
+			try {
+				await fetch("/", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/x-www-form-urlencoded",
+					},
+					body: new URLSearchParams(formData).toString(),
+				});
 
-			modal.style.display = "flex";
+				modal.style.display = "flex";
 
-			setTimeout(() => {
-				modal.style.display = "none";
-				form.reset();
-			}, 10000);
-		} catch (error) {
-			alert("There was a problem sending your message. Please try again.");
-		}
-	});
-}
+				setTimeout(() => {
+					modal.style.display = "none";
+					form.reset();
+				}, 10000);
+			} catch (error) {
+				alert("There was a problem sending your message. Please try again.");
+			}
+		});
+	}
+});
