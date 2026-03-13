@@ -26,19 +26,34 @@ document.addEventListener("DOMContentLoaded", () => {
 	========================= */
 	const hamburger = document.getElementById("hamburger");
 	const menu = document.getElementById("menu");
+	const nav = document.querySelector(".nav");
 
-	if (hamburger && menu) {
+	if (hamburger && menu && nav) {
+		let closeTimer;
+
 		hamburger.addEventListener("click", (e) => {
 			e.stopPropagation();
 			menu.classList.toggle("open");
 		});
 
 		menu.addEventListener("click", (e) => {
-			e.stopPropagation(); // prevent self-close
+			e.stopPropagation();
 		});
 
-		document.addEventListener("click", () => {
-			menu.classList.remove("open");
+		nav.addEventListener("mouseenter", () => {
+			clearTimeout(closeTimer);
+		});
+
+		nav.addEventListener("mouseleave", () => {
+			closeTimer = setTimeout(() => {
+				menu.classList.remove("open");
+			}, 300);
+		});
+
+		document.addEventListener("click", (e) => {
+			if (!e.target.closest(".nav")) {
+				menu.classList.remove("open");
+			}
 		});
 	}
 
