@@ -71,11 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
    CONTACT FORM + MODAL
    (Netlify Forms)
 ========================= */
-
-	/* =========================
-   CONTACT FORM + MODAL
-   (Netlify Forms)
-========================= */
 	const form = document.getElementById("contactForm");
 	const modal = document.getElementById("thankYouModal");
 
