@@ -71,6 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
    CONTACT FORM + MODAL
 ========================= */
 
+	/* =========================
+   CONTACT FORM + MODAL
+========================= */
+
 	const form = document.getElementById("contactForm");
 	const modal = document.getElementById("thankYouModal");
 
@@ -81,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const formData = new FormData(form);
 
 			try {
-				await fetch("/", {
+				const response = await fetch("/", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/x-www-form-urlencoded",
@@ -89,14 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
 					body: new URLSearchParams(formData).toString(),
 				});
 
-				modal.style.display = "flex";
+				if (!response.ok) {
+					throw new Error("Form submission failed");
+				}
+
 				form.reset();
+				modal.style.display = "flex";
 			} catch (error) {
 				alert("There was a problem sending your message. Please try again.");
 			}
 		});
 
-		// Close modal when clicking outside the modal content
+		// Close modal when clicking anywhere
 		modal.addEventListener("click", () => {
 			modal.style.display = "none";
 		});

@@ -65,10 +65,8 @@
 						id="contactForm"
 						name="contact"
 						method="POST"
-						action="/contact.html"
 						data-netlify="true"
 						data-netlify-honeypot="bot-field"
-						data-netlify-recaptcha="true"
 					>
 						<input type="hidden" name="form-name" value="contact" />
 						<input
@@ -87,6 +85,7 @@
 
 						<div class="form-row">
 							<input type="tel" name="phone" placeholder="Phone Number" />
+
 							<input
 								type="email"
 								name="email"
@@ -100,12 +99,9 @@
 							placeholder="Describe your case"
 							required
 						></textarea>
-						<div data-netlify-recaptcha="true"></div>
 
 						<button type="submit">Contact Us</button>
 					</form>
-
-					<!-- Modal for thank you message -->
 
 					<div class="modal" id="thankYouModal">
 						<div class="modal-content">
