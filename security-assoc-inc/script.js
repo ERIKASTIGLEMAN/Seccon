@@ -1,4 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+	/* =========================
+	   SHARED HEADER / FOOTER
+	========================= */
+	async function loadSharedSection(targetId, filePath) {
+		const target = document.getElementById(targetId);
+		if (!target) return;
+
+		try {
+			const response = await fetch(filePath);
+			if (!response.ok) throw new Error(`Failed to load ${filePath}`);
+			target.innerHTML = await response.text();
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	await Promise.all([
+		loadSharedSection("header", "components/header.html"),
+		loadSharedSection("footer", "components/footer.html"),
+	]);
+
 	/* =========================
 	   SERVICES ACCORDION
 	========================= */
@@ -68,13 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	/* =========================
-   CONTACT FORM + MODAL
-========================= */
-
-	/* =========================
-   CONTACT FORM + MODAL
-========================= */
-
+	   CONTACT FORM + MODAL
+	========================= */
 	const form = document.getElementById("contactForm");
 	const modal = document.getElementById("thankYouModal");
 
@@ -104,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 
-		// Close modal when clicking anywhere
 		modal.addEventListener("click", () => {
 			modal.style.display = "none";
 		});

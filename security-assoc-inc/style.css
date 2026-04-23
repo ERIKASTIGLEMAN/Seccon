@@ -39,7 +39,7 @@ body {
 
 h4 {
 	font-family: "Playfair Display", serif;
-	font-size: 30px;
+	font-size: 35px;
 	color: rgba(6, 6, 6, 0.915);
 	margin-top: -8px;
 }
@@ -435,51 +435,56 @@ button:hover {
 	background-color: #0f2f5c;
 }
 
+/* =========================
+   FOOTER (CLEAN + PREMIUM)
+========================= */
+
 .site-footer {
 	background-color: #225fb3;
 	color: #fff;
-	padding: 20px 10px;
+	padding: 16px 10px; /* tighter vertical spacing */
 	font-size: 14px;
 	margin-top: 40px;
-	position: relative;
 	text-align: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.15); /* subtle polish */
 }
 
-.footer-left {
-	position: absolute;
-	left: 20px;
-	top: 50%;
-	transform: translateY(-50%);
+/* Layout: icon + text + icon */
+.footer-inner {
 	display: flex;
 	align-items: center;
-}
-
-.footer-logo {
-	height: 70px;
-	width: auto;
-	position: absolute;
-	left: 730px;
-}
-
-.footer-center {
-	max-width: 420px;
+	justify-content: center;
+	gap: 14px; /* 🔥 tight, premium spacing */
+	max-width: 700px;
 	margin: 0 auto;
+}
+
+/* Center text block */
+.footer-center {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 6px;
-	line-height: 1.5;
+	text-align: center;
+	line-height: 1.35;
 }
 
 .footer-center p {
-	margin: 0;
+	margin: 2px 0;
 }
 
+/* Icons */
+.footer-img {
+	height: 40px; /* refined size */
+	width: auto;
+	opacity: 0.6;
+	filter: grayscale(100%);
+}
+
+/* Links */
 .footer-links {
 	display: block;
 }
 
-/* footer links */
 .site-footer a {
 	color: #fff;
 	text-decoration: none;
@@ -499,6 +504,17 @@ button:hover {
 
 .site-footer a:hover::after {
 	width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.footer-inner {
+		gap: 10px;
+	}
+
+	.footer-img {
+		display: none; /* clean mobile look */
+	}
 }
 
 .privacy-content {
