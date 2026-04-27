@@ -240,12 +240,12 @@ header.shrink h4 {
 }
 
 section {
-	padding: 40px 20px; /* clean spacing */
+	padding: 35px 40px 20px;
 	text-align: center;
 
 	background-image: url("photos/backdrop.jpeg");
-	background-size: cover; /* 🔥 fills entire area */
-	background-position: center;
+	background-size: cover;
+	background-position: center top;
 	background-repeat: no-repeat;
 }
 
@@ -263,12 +263,12 @@ section {
 }
 
 .body-centered {
-	text-align: center;
-	line-height: 2.5;
-	font-size: 25px;
 	max-width: 1200px;
-	margin: 2rem auto 0;
-	color: #000; /* ⬅ black text */
+	margin: 0 auto;
+	padding: 35px 20px 15px;
+	line-height: 1.8;
+	font-size: 22px;
+	color: #000;
 }
 
 ul {
@@ -553,7 +553,7 @@ button:hover {
 	color: #fff;
 	padding: 16px 10px; /* tighter vertical spacing */
 	font-size: 14px;
-	margin-top: 40px;
+	margin-top: 0px;
 	text-align: center;
 	border-top: 1px solid rgba(255, 255, 255, 0.15); /* subtle polish */
 }
