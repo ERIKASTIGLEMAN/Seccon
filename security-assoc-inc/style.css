@@ -253,20 +253,6 @@ section {
 	color: #000; /* ⬅ black text */
 }
 
-.body-centered li {
-	color: #000;
-	margin-bottom: 0.75rem;
-	font-size: 17px;
-}
-
-.body-centered a,
-.body-centered a:visited,
-.body-centered a:hover,
-.body-centered a:active {
-	color: #000; /* ⬅ black link */
-	text-decoration: none;
-}
-
 ul {
 	list-style: none;
 	padding: 0;
