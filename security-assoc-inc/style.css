@@ -240,8 +240,26 @@ header.shrink h4 {
 }
 
 section {
-	padding: 40px;
+	padding: 40px 20px; /* clean spacing */
 	text-align: center;
+
+	background-image: url("photos/backdrop.jpeg");
+	background-size: cover; /* 🔥 fills entire area */
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+section h1 {
+	margin-top: 0;
+}
+
+section p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+section {
+	padding: 10px 20px;
 }
 
 .body-centered {
