@@ -239,7 +239,7 @@ header.shrink h4 {
 	display: block;
 }
 
-section {
+.home section {
 	padding: 35px 40px 20px;
 	text-align: center;
 
@@ -249,17 +249,13 @@ section {
 	background-repeat: no-repeat;
 }
 
-section h1 {
+.home section h1 {
 	margin-top: 0;
 }
 
-section p {
+.home section p {
 	margin-top: 10px;
 	margin-bottom: 10px;
-}
-
-section {
-	padding: 10px 20px;
 }
 
 .body-centered {
@@ -299,6 +295,25 @@ ul {
 }
 
 /*ABOUT PAGE*/
+
+.expert section {
+	padding: 35px 40px 20px;
+	text-align: center;
+
+	background-image: url("photos/Expertise.jpeg");
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.expert section h1 {
+	margin-top: 0;
+}
+
+.expert section p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 .cv-section p {
 	text-align: left;
