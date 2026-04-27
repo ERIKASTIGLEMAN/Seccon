@@ -124,4 +124,54 @@ document.addEventListener("DOMContentLoaded", async () => {
 			modal.style.display = "none";
 		});
 	}
+	/* =========================
+	   SERVICE HOVER MODAL
+	========================= */
+	const serviceContent = {
+		legal: {
+			title: "Legal Consulting & Expert Witness Services",
+			text: "Mr. Foster provides expert witness and consulting services...",
+		},
+		risk: {
+			title: "Risk Assessment",
+			text: "Comprehensive risk assessments identify vulnerabilities...",
+		},
+		surveys: {
+			title: "Security Surveys",
+			text: "Security surveys assess existing measures...",
+		},
+		program: {
+			title: "Program Analysis",
+			text: "Analysis of how security resources were designed...",
+		},
+	};
+
+	const serviceModal = document.getElementById("serviceModal");
+	const serviceModalText = document.getElementById("serviceModalText");
+	const serviceModalTitle = document.getElementById("serviceModalTitle");
+	const serviceGrid = document.querySelector(".service-card-grid");
+	const serviceCards = document.querySelectorAll(".service-card");
+
+	if (
+		serviceModal &&
+		serviceModalText &&
+		serviceModalTitle &&
+		serviceGrid &&
+		serviceCards.length
+	) {
+		serviceCards.forEach((card) => {
+			card.addEventListener("mouseenter", () => {
+				const service = serviceContent[card.dataset.service];
+
+				serviceModalTitle.textContent = service.title;
+				serviceModalText.textContent = service.text;
+
+				serviceModal.classList.add("open");
+			});
+		});
+
+		serviceGrid.addEventListener("mouseleave", () => {
+			serviceModal.classList.remove("open");
+		});
+	}
 });

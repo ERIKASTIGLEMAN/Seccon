@@ -88,36 +88,38 @@
 				</div>
 
 				<div class="consulting-services">
-					<h1>Consulting Services</h1>
+				
+						<h1>Consulting Services</h1>
 
-					<div class="service-card-grid">
-						<div class="service-card">
-							<img
-								src="photos/services/LegConsult.png"
-								alt="Legal Consulting icon"
-							/>
-							<h3>Legal Consulting<br />&amp;<br />Expert Witness Service</h3>
-						</div>
+						<div class="service-card-grid">
+							<button class="service-card" data-service="legal">
+								<img
+									src="photos/services/LegConsult.png"
+									alt="Legal Consulting icon"
+								/>
+								<h3>Legal Consulting<br />&amp;<br />Expert Witness Service</h3>
+							</button>
 
-						<div class="service-card">
-							<img
-								src="photos/services/EvalSecurity.png"
-								alt="Risk Analysis icon"
-							/>
-							<h3>Evaluation<br />&amp;<br />Security Risk Analysis</h3>
-						</div>
+							<button class="service-card" data-service="risk">
+								<img
+									src="photos/services/EvalSecurity.png"
+									alt="Risk Analysis icon"
+								/>
+								<h3>Evaluation<br />&amp;<br />Security Risk Analysis</h3>
+							</button>
 
-						<div class="service-card">
-							<img src="photos/services/SSA.png" alt="Surveys icon" />
-							<h3>Surveys<br />&amp;<br />Standard-of-Care Assessments</h3>
-						</div>
+							<button class="service-card" data-service="surveys">
+								<img src="photos/services/SSA.png" alt="Surveys icon" />
+								<h3>Surveys<br />&amp;<br />Standard-of-Care Assessments</h3>
+							</button>
 
-						<div class="service-card">
-							<img
-								src="photos/services/ProgramAnalysis.png"
-								alt="Defensibility icon"
-							/>
-							<h3>Program Analysis<br />&amp;<br />Defensibility</h3>
+							<button class="service-card" data-service="program">
+								<img
+									src="photos/services/ProgramAnalysis.png"
+									alt="Defensibility icon"
+								/>
+								<h3>Program Analysis<br />&amp;<br />Defensibility</h3>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -130,7 +132,16 @@
 			<button id="contactBtn">Contact Us</button>
 		</section>
 
-		<div id="footer"></div>
+
+
+	<div id="serviceModal" class="service-modal">
+	<div class="service-modal-content">
+		<h2 id="serviceModalTitle"></h2>
+		<p id="serviceModalText"></p>
+	</div>
+</div>
+	<div id="footer"></div>
+</div>
 
 		<script src="script.js"></script>
 	</body>

@@ -394,6 +394,79 @@ header.shrink h4 {
 	transition: all 0.2s ease;
 }
 
+/* Click Services */
+
+.service-card {
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	color: #071c4d;
+}
+
+.service-card:hover {
+	background-color: #225fb3;
+	color: #ffffff;
+}
+
+.service-card:hover h3 {
+	color: #ffffff;
+}
+
+.service-modal {
+	display: none;
+	position: fixed;
+	inset: 0;
+
+	align-items: center;
+	justify-content: flex-end; /* 🔥 push to right */
+
+	padding-right: 1850px; /* 🔥 space from edge */
+
+	z-index: 10000;
+	pointer-events: none;
+}
+
+.service-modal.open {
+	display: flex;
+}
+
+.service-modal-content {
+	width: 500px;
+	height: 500px;
+	background: #0c2f5c;
+	color: #ffffff;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.service-modal-content p {
+	font-size: 20px;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.service-modal-content h2 {
+	margin: 0 0 20px;
+	margin-bottom: 12px;
+	font-size: 30px;
+}
+
+.service-modal-close {
+	position: absolute;
+	top: 12px;
+	right: 16px;
+	background: transparent;
+	color: #ffffff;
+	font-size: 32px;
+	border: none;
+	cursor: pointer;
+	display: none;
+}
+
 /* Two-column layout */
 .overview-grid {
 	display: grid;
