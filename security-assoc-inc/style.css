@@ -133,7 +133,7 @@ header.shrink h4 {
 }
 .hero-text {
 	position: absolute;
-	top: 40%; /* ⬅ was 50% */
+	top: 45%; /* ⬅ was 50% */
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
@@ -261,10 +261,183 @@ header.shrink h4 {
 .body-centered {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 35px 20px 15px;
-	line-height: 1.8;
+	padding: 0px 20px 15px;
+	line-height: 1.3;
 	font-size: 22px;
-	color: #000;
+	color: #0c0c0c;
+
+	text-shadow:
+		-2px -2px 0 #fff,
+		2px -2px 0 #fff,
+		-2px 2px 0 #fff,
+		2px 2px 0 #fff; /* 🔥 white outline */
+}
+
+/*Center Section Alignment + Grid for Professional Affiliations*/
+/* Professional Affiliations */
+
+.affiliation-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 0;
+	max-width: 520px;
+	height: 505px;
+	margin: 25px auto 0;
+}
+
+.affiliation-card {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 20px;
+	min-height: 112px;
+	background: #ffffff;
+	border: 2px solid #1f3a5f;
+	border-radius: 10px;
+	padding: 16px 20px 16px 0;
+
+	text-decoration: none;
+	color: #071c4d;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+	overflow: visible;
+}
+
+.affiliation-icon {
+	width: 80px;
+	height: 80px;
+	background: #9c9c9c;
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	flex: 0 0 80px;
+	margin-left: -16px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.affiliation-icon img {
+	width: 66px;
+	height: 64px;
+	object-fit: contain;
+	background: #ffffff;
+	padding: 6px;
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+
+.affiliation-card span {
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.25;
+	color: #071c4d;
+	text-align: left;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.affiliation-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	border-color: #0f2f5c;
+	transition: all 0.2s ease;
+}
+
+/* Consulting Services */
+
+.service-card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 32px;
+	max-width: 520px;
+
+	margin: 25px auto 0;
+}
+
+.service-card {
+	background: #ffffff;
+	border: 2px solid #1f3a5f;
+	border-radius: 10px;
+	padding: 0 14px 22px;
+	text-align: center;
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+	min-height: 210px;
+}
+
+.service-card img {
+	width: 95px;
+	height: 95px;
+	background: #9c9c9c;
+	border-radius: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+	object-fit: contain;
+
+	margin-top: -18px;
+	margin-bottom: 12px;
+}
+
+.service-card h3 {
+	margin: 0;
+	font-size: 20px;
+	line-height: 1.25;
+	color: #071c4d;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.service-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	border-color: #0f2f5c;
+	transition: all 0.2s ease;
+}
+
+/* Two-column layout */
+.overview-grid {
+	display: grid;
+	grid-template-columns: 560px 520px;
+	gap: 120px;
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 20px;
+	align-items: start;
+}
+
+.professional-affiliations,
+.consulting-services {
+	width: 520px;
+}
+
+.professional-affiliations h1,
+.consulting-services h1 {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.affiliation-list,
+.service-card-grid {
+	width: 520px;
+	max-width: 520px;
+	margin: 25px auto 0;
+}
+
+@media (max-width: 768px) {
+	.overview-grid {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	.professional-affiliations h1,
+	.consulting-services h1 {
+		text-align: center;
+	}
+
+	.service-card-grid {
+		grid-template-columns: 1fr;
+		max-width: 280px;
+	}
 }
 
 ul {
