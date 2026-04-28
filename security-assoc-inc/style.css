@@ -314,7 +314,7 @@ header.shrink h4 {
 	justify-content: center;
 
 	flex: 0 0 80px;
-	margin-left: -16px;
+	margin-left: -28px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -350,33 +350,36 @@ header.shrink h4 {
 .service-card-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 32px;
-	max-width: 520px;
+	gap: 36px;
 
-	margin: 25px auto 0;
+	max-width: 640px; /* ⬅ was 520px */
 }
 
 .service-card {
 	background: #ffffff;
 	border: 2px solid #1f3a5f;
 	border-radius: 10px;
-	padding: 0 14px 22px;
+	padding: 82px 14px 22px;
 	text-align: center;
 	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-	min-height: 210px;
+	min-height: 240px;
+	position: relative;
 }
 
 .service-card img {
-	width: 95px;
-	height: 95px;
 	background: #9c9c9c;
 	border-radius: 10px;
 	padding: 10px;
 	box-sizing: border-box;
 	object-fit: contain;
 
-	margin-top: -18px;
-	margin-bottom: 12px;
+	position: absolute;
+	top: -28px; /* raise/lower all gray squares here */
+	left: 50%;
+	transform: translateX(-50%);
+	width: 95px;
+	height: 95px;
+	margin: 0; /* important: removes old margin behavior */
 }
 
 .service-card h3 {
@@ -385,13 +388,6 @@ header.shrink h4 {
 	line-height: 1.25;
 	color: #071c4d;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.service-card:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-	border-color: #0f2f5c;
-	transition: all 0.2s ease;
 }
 
 /* Click Services */
@@ -413,46 +409,46 @@ header.shrink h4 {
 
 .service-modal {
 	display: none;
-	position: fixed;
-	inset: 0;
+	position: absolute;
+	top: 70px; /* aligns below the heading */
 
-	align-items: center;
-	justify-content: flex-end; /* 🔥 push to right */
-
-	padding-right: 1850px; /* 🔥 space from edge */
+	margin-right: 35px; /* space between modal and cards */
 
 	z-index: 10000;
 	pointer-events: none;
 }
 
 .service-modal.open {
-	display: flex;
+	display: block;
+	pointer-events: auto; /* ⬅ IMPORTANT */
 }
 
 .service-modal-content {
-	width: 500px;
-	height: 500px;
+	width: 440px;
+	min-height: 420px;
 	background: #0c2f5c;
 	color: #ffffff;
-	padding: 30px;
+	padding: 34px;
 	border-radius: 10px;
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: left;
 }
 
 .service-modal-content p {
-	font-size: 20px;
-	line-height: 1.6;
 	margin: 0;
+	font-size: clamp(15px, 1.25vw, 20px);
+	line-height: 1.6;
 }
 
 .service-modal-content h2 {
-	margin: 0 0 20px;
-	margin-bottom: 12px;
-	font-size: 30px;
+	margin: 0 0 24px 0;
+	font-size: clamp(22px, 2vw, 30px);
+	line-height: 1.2;
 }
 
 .service-modal-close {
@@ -476,6 +472,9 @@ header.shrink h4 {
 	margin: 0 auto;
 	padding: 20px;
 	align-items: start;
+}
+.professional-affiliations {
+	position: relative; /* ⬅ new anchor */
 }
 
 .professional-affiliations,
