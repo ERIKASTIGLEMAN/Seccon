@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const contactBtn = document.getElementById("contactBtn");
 	if (contactBtn) {
 		contactBtn.addEventListener("click", () => {
-			window.location.href = "mailto:seccon@aol.com";
+			window.location.href = "contact.html";
 		});
 	}
 
