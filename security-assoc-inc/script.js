@@ -116,7 +116,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 				form.reset();
 				modal.style.display = "flex";
 			} catch (error) {
-				alert("There was a problem sending your message. Please try again.");
+				console.error(error);
+				window.location.href =
+					"mailto:seccon@aol.com?subject=Website Inquiry - Security Associates";
 			}
 		});
 
