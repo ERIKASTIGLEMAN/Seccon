@@ -465,6 +465,15 @@ header.shrink h4 {
 	display: none;
 }
 
+#contactBtn {
+	font-size: 22px;
+	padding: 18px 44px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	border-radius: 3px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
 /* Two-column layout */
 .overview-grid {
 	display: grid;
