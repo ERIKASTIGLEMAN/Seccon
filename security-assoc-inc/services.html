@@ -13,56 +13,57 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
-	<body>
+	<body class="services-page-body">
 		<div id="header"></div>
 
 		<main class="page-content">
 			<section class="services">
-				<h1>Services Provided</h1>
+			
+<div class="consulting-services">
+				
+						<h1>Consulting Services</h1>
 
-				<div class="services-grid">
-					<details class="service-item">
-						<summary>Legal Consulting & Expert Witness Services</summary>
-						<p>
-							Mr. Foster provides security consulting and expert witness
-							services to law firms representing both plaintiffs and defendants
-							in premises liability and negligent security litigation. His work
-							focuses on foreseeability, standard of care, and the defensibility
-							of security programs central to case evaluation, expert
-							disclosure, and trial strategy.
-						</p>
-					</details>
+						<div id="serviceModal" class="service-modal">
+		<div class="service-modal-content">
+			<h2 id="serviceModalTitle"></h2>
+			<p id="serviceModalText"></p>
+		</div>
+	</div>
 
-					<details class="service-item">
-						<summary>Evaluation & Security Risk Analysis</summary>
-						<p>
-							Comprehensive risk assessments identify vulnerabilities central to
-							negligent security claims, including environmental factors, crime
-							patterns, operational practices, and the reasonableness of
-							security measures at the time of the incident.
-						</p>
-					</details>
+						<div class="service-card-grid">
+							<button class="service-card" data-service="legal">
+								<img
+									src="photos/services/LegConsult.png"
+									alt="Legal Consulting icon"
+								/>
+								<h3>Legal Consulting<br />&amp;<br />Expert Witness Service</h3>
+							</button>
 
-					<details class="service-item">
-						<summary>Surveys & Standard-of-Care Assessments</summary>
-						<p>
-							Security surveys assess existing measures, policies, procedures,
-							staffing, and physical safeguards against industry standards and
-							accepted practices, with a focus on whether the applicable
-							standard of care was met.
-						</p>
-					</details>
+							<button class="service-card" data-service="risk">
+								<img
+									src="photos/services/EvalSecurity.png"
+									alt="Risk Analysis icon"
+								/>
+								<h3>Evaluation<br />&amp;<br />Security Risk Analysis</h3>
+							</button>
 
-					<details class="service-item">
-						<summary>Program Analysis & Defensibility</summary>
-						<p>
-							Analysis of how security resources were designed, implemented, and
-							managed, including whether measures were reasonably integrated to
-							address foreseeable risks and whether those decisions are
-							defensible in litigation.
-						</p>
-					</details>
+							<button class="service-card" data-service="surveys">
+								<img src="photos/services/SSA.png" alt="Surveys icon" />
+								<h3>Surveys<br />&amp;<br />Standard-of-Care Assessments</h3>
+							</button>
+
+							<button class="service-card" data-service="program">
+								<img
+									src="photos/services/ProgramAnalysis.png"
+									alt="Defensibility icon"
+								/>
+								<h3>Program Analysis<br />&amp;<br />Defensibility</h3>
+							</button>
+						</div>
+					</div>
 				</div>
+			</div>
+
 			</section>
 		</main>
 

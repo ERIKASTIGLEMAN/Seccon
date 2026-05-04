@@ -596,6 +596,92 @@ ul {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 /* SERVICES PAGE */
+.services-page-body .services h1 {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto 70px;
+	display: block;
+}
+
+.services-page-body .services {
+	background-image: url("photos/backdrop.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	max-width: none;
+	margin: 0;
+	padding: 80px 20px;
+	min-height: 720px;
+}
+
+.services-page-body .consulting-services {
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.services-page-body .service-card {
+	min-height: 280px;
+	padding: 100px 30px 40px;
+}
+
+.services-page-body .services h1 {
+	margin-bottom: 80px; /* ⬅ more breathing room under title */
+}
+
+.services-page-body .service-card-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 across */
+	gap: 40px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: start;
+}
+
+.services-page-body .service-card h3 {
+	font-size: 22px;
+	line-height: 1.3;
+}
+
+.services-page-body .service-modal {
+	position: static; /* removes left-side floating */
+	display: none;
+	width: 100%;
+	max-width: 1200px;
+	margin: 70px auto 0; /* space below cards */
+	z-index: 10;
+}
+
+.services-page-body .service-modal.open {
+	display: block;
+}
+
+.services-page-body .service-modal-content {
+	width: 100%;
+	min-height: 260px;
+	height: auto;
+	padding: 40px 60px;
+	background: #142d52;
+	border: 2px solid #225fb3;
+	border-radius: 12px;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+}
+
+.services-page-body #serviceModalTitle {
+	font-size: 42px;
+	margin: 0 0 20px;
+}
+
+.services-page-body #serviceModalText {
+	font-size: 24px;
+	line-height: 1.6;
+	max-width: 950px;
+	margin: 0 auto;
+}
 
 .page-content {
 	flex: 1;

@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const serviceContent = {
 		legal: {
 			title: "Legal Consulting & Expert Witness Services",
-			text: "Mr. Foster provides security consulting and expert witness services to law firms representing both plaintiffs and defendants in premises liability and negligent security litigation. His work focuses on foreseeability, standard of care, and the defensibility of security programs central to case evaluation, expert disclosure, and trial strategy..",
+			text: "Mr. Foster provides security consulting and expert witness services to law firms representing both plaintiffs and defendants in premises liability and negligent security litigation. His work focuses on foreseeability, standard of care, and the defensibility of security programs central to case evaluation, expert disclosure, and trial strategy.",
 		},
 		risk: {
 			title: "Risk Assessment",
