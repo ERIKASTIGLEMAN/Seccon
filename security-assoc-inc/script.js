@@ -183,12 +183,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 				serviceModal.classList.add("open");
 
-				// 🔥 auto-fit text
-				setTimeout(() => {
-					fitTextToContainer(serviceModalTitle, 30, 18);
-					fitTextToContainer(serviceModalText, 20, 14);
-				}, 0);
-
 				return;
 			}
 
