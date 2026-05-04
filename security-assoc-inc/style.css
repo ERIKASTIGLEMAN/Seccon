@@ -464,6 +464,11 @@ header.shrink h4 {
 	cursor: pointer;
 	display: none;
 }
+.bottomline h3 {
+	font-size: 30px; /* ⬅ increase */
+	line-height: 1.3;
+	font-weight: 600;
+}
 
 #contactBtn {
 	font-size: 22px;
